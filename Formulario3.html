@@ -1,0 +1,95 @@
+<doctype html!>
+<html lang="es">
+<!-- ARCHIVO  :   Formulario3.html-->
+<html>
+    <Head>
+        <Title>Formulario 3 CSS</Title>  
+        <meta charset="utf-8"/>
+          
+        <link rel="stylesheet" type="text/css" href="Formulario3.css">
+      
+    </Head>
+
+    <Body>
+        <!--Para poner nombre a los diversos datos que se introducen en un formulario, debes usar el atributo name 
+        Para enviar ciertos tipos de información al servidor con un formulario, el protocolo HTTP
+        Hypertext Transfer Protocol, protocolo de transferencia de hipertextos)
+
+        ATRIBUTO ACTION : El atributo “action” indica el tipo de acción que va a realizar el formulario.
+        la información puede enviarse a un correo electrónico o a un programa que la gestione.
+        Es mediante esta etiqueta que se gestionan los formularios.
+        Si queremos que el formulario se envíe a un correo, la acción quedaría escrita de la siguiente manera: 
+
+        <form action=mailto:direcciondelcorreo@correo.com…></form>.
+
+        Este tipo de envíos se utilizarían para casos de formularios de contacto, de sugerencias, etc.
+
+
+        ATRIBUTO  METHOD:
+        Mediante este atributo le indicamos al formulario la forma en la que el formulario será enviado. 
+
+        EXISTEN BASICAMENTE DOS METODOS PARA EL ENVIO DE INFORMACION:  GET Y EL POST
+        Si no se coloca ninguno en navegador por defecto asume metodo GET. Siendo el POST el más usado.
+
+        Con el método GET, los datos que se envían al servidor se escriben en la misma dirección URL.
+        En la ventana del navegador, lo encontrarás así:
+
+        www.ejemplo.com/registrarse.php?nombre=pedro&amp;apellido=perez&amp;edad=55&amp;genero=hombre
+        
+        La mayor desventaja del método GET es su débil protección de los datos. 
+        Los parámetros URL que se envían quedan visibles en la barra de direcciones del navegador
+        y son accesibles sin clave en el historial de navegación.
+
+        El método POST introduce los parámetros en la solicitud HTTP para el servidor. Por ello,
+        no quedan visibles para el usuario. 
+        En lo relativo a los datos, como, por ejemplo, al rellenar formularios con nombres de usuario y contraseñas,
+        el método POST ofrece mucha discreción. Los datos no se muestran en el caché ni tampoco en el historial
+        de navegación. La flexibilidad del método POST también resulta muy útil: no solo se pueden enviar
+        textos cortos, sino también otros tipos de información, como fotos o vídeos.  
+        
+        -->
+        <!-- action, recibe una url que se encarga de procesar los datos que enviemos en el formulario -->
+        <!-- method, nos permite indicar porque metodo vamos a enviar la informacion por metodo pop o get  -->
+        <!-- <form action="" method=""> 
+            web mail que administra tu empresa de hostonig o google-->
+        <form autocomplete="off"  action="mailto:capacitacion@gmail.com" method="post" enctype="text/plain">
+            <!--<input type="text" value ="Escribe tu Nombre">-->
+            
+            <label for="nombre"> Nombre y Apellido:</label>  <!-- en el for la va la variable del ID en este caso nombre-->
+            <input type="text" id="nombre" placeholder ="Escribe tu Nombre y luego su apellidos" required> <!--la propiedad NAME identifica toda la instruccion con el nombre,es importante cuando se procesan los datos-->
+            
+            <label for="mail"> Mail:</label>
+            <input type="email"  id="mail" placeholder="Escribe tu mail" required><!-- s nos permite comprobar que la estructura de un correo este bien escrito-->
+            
+        
+            <!--Textarea :  permite edición mutilínea de texto sin formato.-->
+            <label for="mensaje"> Mensaje:</label>
+            <textarea id="mensaje" placeholder="Escribe tu Mensaje"></textarea>
+
+            <div class="radio">
+                    <label for="hombre">Hombre</label>
+                    <input type="radio" name="sexo" id="hombre">            
+                    
+                    <label for="mujer">Mujer</label>
+                    <input type="radio" name="sexo" id="mujer">           
+            </div>
+                    
+            <!--Control para introducir una fecha (año, mes y día, sin tiempo).-->
+            <div class="fecha">
+                <label for="fecha">Ingrese o seleccione una  Fecha : </label> 
+                <input type="date" placeholder ="Fecha : " name="fecha" id="fecha">                        
+            </div>      
+
+            <input type="submit" value="Enviar"
+            <br>
+            <br>
+            <input type="reset" value="Borrar datos">
+            <br>
+        
+        </form>
+
+    </Body>
+
+</html>
+
+        

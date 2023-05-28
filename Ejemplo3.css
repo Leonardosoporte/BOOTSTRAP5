@@ -1,0 +1,51 @@
+/* Ejemplo3.css  */
+
+*
+{
+    /*border-box le dice al navegador tomar en cuenta para cualquier
+    valor que se especifique de borde o de relleno para el ancho o
+    alto de un elemento.  */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html
+{
+    height: 100%; /*El body va ocupar el 100% del html  */
+}
+  
+body
+{
+    background-image: url(Imagenes/Fondooriental.png);
+    min-height: 100%;
+}
+ 
+
+.container
+{    
+    margin-left: 7%;  
+    margin-top:100px ;                   
+    height: 100%px; 
+    width: 100%;  
+    background-color: aquamarine;  
+}
+
+.row{  /*Definimos un tipo de fuente, color y tamaño para todas las filas    */
+    font-family: arial;
+    color: rgb(55, 41, 157);
+    /*  font-size: 1.5em; */
+    font-size: 1.5em;
+}
+
+.figure{
+ margin-top: 150px;
+ margin-left: 30%;
+}
+
+.imagen1
+{
+    margin-top: 70px;
+    margin-left: 20%;
+}

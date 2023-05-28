@@ -1,0 +1,59 @@
+/* Archivo :  MAQUETACION1.CSS  */
+
+/* Aplicamos colores para hacer los elementos visibles */
+body{
+    background-color:  #cff2d6 ;
+}
+
+ /*Vemos que los H1 y <P> toman todo el ancho de la caja
+ son elementos de bloque   */
+/**/
+h1,p{
+    background-color:  yellow ;
+}
+
+div{
+    background-color:  rgb(123, 240, 123) ;
+
+    /*Aplicamos un espacio entre el borde de la caja y los elementos
+    que estan adentro. El padding es un margen interior, del
+    borde de la caja div hacia adentro.*/
+
+    /*  
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    */
+   
+    /*Es lo mismo si aplicamos los padding por separados*/
+    /*   */
+      padding: 50px; 
+   
+
+    /*Ahora aplicamos un margin
+    Margin es una distancia o margen que aparece entre el margen del body
+    y la partes exterior de las cajas */
+    /* 
+    margin-top:50px;
+    margin-left:50px;
+    margin-right:50px;
+    margin-bottom:50px;
+     */  
+
+    /*  */
+    margin: 100px;
+  
+
+    /*Ahora fijamos un ancho a la caja con width (ancho) y heigt(altura) 
+    Si lo cambiamos a 300px se ajusta el texto en la segunda linea 
+    al final puedo cambiar por ej. 2000 x 2000  */
+    
+    /* */
+    width: 500px;  
+    height:400px ;
+   
+
+}
+
+

@@ -1,0 +1,143 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%; /*El body va ocupar el 100% del html  */
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 20px;
+  min-height: 100%;
+}
+
+.grid-container1 > * {
+  /*Definimos una opacidad entre los margenes de los elementos  */
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding-top: 10px; /*Padding para los textos de caja caja   */
+  text-align: center;
+}
+
+/*Definimos un area especifica para cada plantilla   */
+.header1 {
+    grid-area: header1;
+    background-color: #85aedd;
+    text-align: center;
+  }
+ 
+
+  .nav1 {
+    grid-area: nav1;
+    background-color: #afd6af;
+  }
+  
+  .aside1 {
+    grid-area: aside1;
+    background-color: #fdcfcf;
+  }
+  
+  .section1 {
+    grid-area: section1;
+    background-color: #f5f5f5;
+  }
+  
+  .footer1 {
+    grid-area: footer1;
+    background-color: #8c96a0;
+  }
+
+
+  /*Grid-template:Comenzamos con la propiedad grid-template-columns,
+  que sirve para definir el número de columnas que tendrá nuestra rejilla,
+  así como los tamaños asignados a cada una. El uso de este atributo es
+  sencillo, pues simplemente tenemos que indicar valores con sus unidades,
+  separados por espacios.   */
+
+  
+.grid-container1 {
+ 
+    display: grid;  /*La declaración display: grid Activa css-grid y te proporciona
+                    una cuadrícula de una sola columna, por lo que tus elementos
+                    continúan mostrándose uno debajo del otro, como lo hacen en el
+                    flujo normal.
+                    Para ver algo que se parezca más a una cuadrícula, necesitamos
+                    añadir columnas a la cuadrícula.     */
+
+    gap: 10px; /*Separacion horizontal de 10px entre los elemento   */
+
+    /*propiedad grid-template-columns, que sirve para definir el número
+    de columnas que tendrá nuestra rejilla, así como los tamaños asignados
+    a cada una. El uso de este atributo es sencillo, pues simplemente 
+    tenemos que indicar valores con sus unidades, separados por espacios.   */
+    grid-template-areas:
+      /*Definimos las areas de nuestro grid
+      Con esta estructura tenemos lista el diseño para movil
+      Es decir deinimos una fila para cada elemento    */
+      "header1" 
+      "nav1" 
+      "section1"   
+      "aside1" 
+      "footer1"  ;
+  }
+
+  
+/*Ahora utilizamos una media query 
+todo lo que esta adentro de la media query se va a ejecutar cuando el
+ancho sea de 600px tipo table  */
+  @media (min-width: 600px) {
+    
+    .grid-container1 {
+      /* 
+      grid-template-columns: 200px  auto;
+     */
+      /*DEfinimos la columna y su tamaño para table   */
+      grid-template:
+      "header1   heder1"   100px       /* para Fila  1   */
+      "nav1      nav1"      50px       /* para Fila  2   */
+      "section1  aside1"   350px       /* para Fila  3   */
+      "footer1   footer1"  100px     /* para Fila  4   */                      
+    }
+  }
+  
+  
+@media (min-width: 900px) {
+  .grid-container1 {
+   
+    grid-template:
+    /*Definimos los espacios para las 3 columnas
+    Aqui defino las 3 columnas creadas con el grid:template
+      Col.1     Col.2   Col2.    Taamaño*/           
+      "header1  header1 header1" 100px  /*Definimos la altura de cada row o grilla   */
+      "nav1  nav1 nav1"            50px
+       "section1  section1 aside1" 350px  /*Aqui agrando el alto de la fila 3,se puede cambiar a 1.000   */
+      "footer1  footer1 footer1"   100px 
+      /
+      200px    auto   400px;
+  }
+}
+
+
+.footer1{
+  width: 80%;
+  height: 150px;
+  margin-left: 10%;
+  margin-top: 30px;
+  background: #d5d8dc;
+  border-radius: 1em;
+  text-align: center;
+  border:none
+}
+
+
+.footer1  h5{
+  color:red;
+  font-family: Arial;
+  font-size: 20px;
+  text-align: center;
+}
+

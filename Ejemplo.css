@@ -1,0 +1,7 @@
+/* Ejemplo  */
+.container
+{
+    /*Al colocar este background podemos ver el margen izquierdo y derecho del container   */
+    background-color: #b2babb ;
+    border: 2px solid;
+}

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>Ejemplo 1</title>
+    <!--Referenciamos nuestro archivo desde CND, es decir hacemos la peticion
+    al recurso-->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"   >
+  
+   <!--Otra forma es referenciarlo de manera local
+   y funciona, dejamos la de arriba activada-->
+   <!--
+   <link rel="stylesheet" href="css/bootstrap.min.css"   >
+   -->
+
+  </head>
+  
+  <body>
+    <!--Si no queremos que las columnas se muestren apiladas para tamaños
+    de pantalla pequeños podemos indicar también la disposición para esos
+    casos mediante las clases .col-* además de las que ya teníamos
+    con .col-md-*.  Por ejemplo:-->
+
+   
+    <h1>Ejercicio  Grillas de Bootstrap</h1>
+    <div class="container">
+        <!-- En pantallas pequeñas aparecerá una columna que ocupará todo el ancho
+y otra que ocupará la mitad de la pantalla -->
+<div class="row">
+    <div class="col-12 col-md-8"style="background-color: #D8D8D8;">.col-12 .col-md-8</div>
+    <div class="col-6 col-md-4"style="background-color:#BDBDBD;">.col-6 .col-md-4</div>
+  </div>
+  
+  <!-- En pantallas medianas se indica que cada columna ocupe la mitad
+  del ancho disponible -->
+  <div class="row">
+    <div class="col-6 col-md-4" style="background-color:  #d4e8e6 ;">.col-6 .col-md-4</div>
+    <div class="col-6 col-md-4" style="background-color:#81DAF5;">.col-6 .col-md-4</div>
+    <div class="col-6 col-md-4" style="background-color: #0080FF;">.col-6 .col-md-4</div>
+  </div>
+  
+  <!-- Como no se indica el tamaño para pantallas grandes las columnas
+  siempre ocuparán el 50% -->
+  <div class="row">
+    <div class="col-6" style="background-color: #e8daef ;">.col-6</div>
+    <div class="col-6" style="background-color:  #4ddecc ;">.col-6</div>
+  </div>
+
+
+        
+    </div>
+
+
+
+ 
+  <!--Imagen
+     <img src="Fotos/EtiquetaOferta.jpg" >
+     <img src="Fotos/fotomovil1.jpg" with="160" height="150" >
+     <img src="Fotos/fotohp1" with="160" height="150" >
+
+     Las imágenes en Bootstrap se hacen responsive con .img-fluid. 
+     Esto aplica max-width: 100%; y height: auto;    
+     <img src="Fotos/fotomovil1.jpg" class="img-fluid" alt="...">
+
+     Miniaturas de imágenes
+     Además de nuestras utilidades border-radius, puedes usar .img-thumbnail
+     para darle a una imagen una apariencia de borde redondeado de 1px.
+    <img src="Fotos/fotomovil1.jpg" class="img-thumbnail" alt="...">
+  -->
+  </body>
+</html>
